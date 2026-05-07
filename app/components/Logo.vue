@@ -1,3 +1,3 @@
 <template>
-    <span>Minha logo</span>
+    <span>(Logo)</span>
 </template>
