@@ -4,9 +4,10 @@ import Layout from '../layouts/default.vue';
 </script>
 
 <template>
-  <UApp>
-    <NuxtLayout>
+  <UDashboardPanel>
+    <template #header>
       <NuxtPage />
-    </NuxtLayout>
-  </UApp>
+      <UDashboardNavbar />
+    </template>
+  </UDashboardPanel>
 </template>

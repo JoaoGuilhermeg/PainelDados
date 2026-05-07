@@ -50,12 +50,13 @@ const items: NavigationMenuItem[][] = [
             :collapsed="collapsed"
             :items="items[2]"
             orientation="vertical"
-            class="mt-auto"
+            class="flex-col mt-auto"
             />
             </div>
         </template>
     </UDashboardSidebar>
     </div>
+    <slot />
 </UDashboardPanel>
 </UDashboardGroup>
 </template>
