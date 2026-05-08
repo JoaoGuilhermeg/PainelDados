@@ -54,7 +54,7 @@ const items: NavigationMenuItem[][] = [
         </template>
     </UDashboardSidebar>
 <UDashboardPanel>
-    <slot />
+    <slot/>
 </UDashboardPanel>
 </UDashboardGroup>
 </template>

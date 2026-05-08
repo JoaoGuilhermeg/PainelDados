@@ -1,3 +1,3 @@
 <template>
-    <span>(Logo)</span>
+    <span>Portal de Dados</span>
 </template>
