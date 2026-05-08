@@ -6,14 +6,12 @@ const items: NavigationMenuItem[][] = [
     {
     label: 'Painel de Dados',
     icon:'i-lucide-layout-list',
-    to:'/index',
     active:true
     },
 ],
 [{
     label: 'Gestão de Relatórios',
-    icon: 'i-lucide-chart-column-big',
-    to:'/gestao'
+    icon: 'i-lucide-chart-column-big'
 }],
 [
     {
@@ -25,15 +23,13 @@ const items: NavigationMenuItem[][] = [
 
 <template>  
 <UDashboardGroup>
-<UDashboardPanel>
-    <div>
    <UDashboardSidebar collapsible resizable :ui="{ footer: 'border-r border-default'}">
         <template #header = "{ collapsed }">
             <Logo v-if="!collapsed" class="h-2 w-auto shrink-0" />
             <UIcon v-else name="i-lucide-chart-column-big" class="size-5 text-primary nx-auto" />
         </template>
-        <template #default = "{collapsed}">
             
+        <template #default = "{collapsed}">
             <div class="h-screen overflow-hidden">
             <UNavigationMenu
             :collapsed="collapsed"
@@ -57,14 +53,10 @@ const items: NavigationMenuItem[][] = [
             </div>
         </template>
     </UDashboardSidebar>
-    </div>
+<UDashboardPanel>
+    <slot />
 </UDashboardPanel>
 </UDashboardGroup>
-     <main class="flex-1 h-full overflow-y-auto p-8">
-    <div class="max-w-9xl mx-auto">
-    <slot />
-    </div>
-    </main>
 </template>
     
   

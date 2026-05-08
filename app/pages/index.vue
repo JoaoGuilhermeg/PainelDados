@@ -29,14 +29,15 @@ const cards = ref([
 </script>
 
 <template>
-  <UDashboardPanel>
-    <UContainer>
-    <template #header>   
+  <UDashboardPanel grow >
+    <UContainer class="py-1">
+    <template #header>
       <UDashboardNavbar />
    </template>
   </UContainer>
    <template>
-     <UContainer class="py-10">
+    <div class="flex-1 h-full">
+     <UContainer class="py-1 max-w-none full">
     <div class="mb-8">
       <h2 class="text-3xl font-bold text-gray-900 dark:text-white">
         Painel
@@ -46,8 +47,9 @@ const cards = ref([
       <UPageCard v-for="(card, index) in cards" :key="index" v-bind="card" />
     </UPageGrid>
   </UContainer>
+  </div>
   <UContainer class="py-2">
-    <div class=" flex mb-12">
+    <div class="mb-12">
     </div>
   </UContainer>
 </template>
